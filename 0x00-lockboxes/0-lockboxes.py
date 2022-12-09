@@ -9,9 +9,8 @@ def canUnlockAll(boxes):
 
     for n in key:
         for correct in boxes[n]:
-            if correct not in key:
-                if correct < len(boxes):
-                    key.append(correct)
+            if correct not in key and correct < len(boxes):
+                key.append(correct)
     if len(key) == len(boxes):
         return True
     return False
